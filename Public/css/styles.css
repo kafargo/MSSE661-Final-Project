@@ -1,0 +1,63 @@
+body {
+  background-image: url("../images/Spice.Background.Image.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.item1 {
+  grid-area: 1 / 1 / 1 / 4;
+}
+.item2 {
+  grid-area: 2 / 1 / 2 / 4;
+  padding: 100px;
+}
+.item3 {
+  grid-area: 3 / 1 / 3 / 1;
+}
+.item4 {
+  background-color: rgba(255, 255, 255, 0.8);
+  grid-area: 3 / 2 / 3 / 2;
+  text-align: center;
+  padding: 20px;
+}
+.item5 {
+  grid-area: 3 / 3 / 3 / 3;
+}
+.item6 {
+  grid-area: 4 / 1 / 4 / 4;
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.center {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar a {
+  color: black;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+footer {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+  }
