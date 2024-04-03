@@ -9,6 +9,6 @@ app.use('/html', express.static(__dirname + '/public/html'));
 app.use('/images', express.static(__dirname + '/public/images'));
 
 
-app.listen(3000, function(){
-    console.log('Server started running at http://localhost:%s', 3000);
+app.listen(3001, function(){
+    console.log('Server started running at http://localhost:%s', 3001);
 });

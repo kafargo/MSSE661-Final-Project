@@ -23,13 +23,13 @@
       <div class="item4">
         <form class="" action="">
           <div>
-            <input id="username" type="text" placeholder="Username.." />
+            <input id="userEmail" type="text" placeholder="Email.." />
           </div>
           <div>
-            <input id="password" type="password" placeholder="Password.." />
+            <input id="userPassword" type="password" placeholder="Password.." />
           </div>
-          <div><input type="submit" value="Submit" /></div>
-          <div class="signup"><a href="../html/signup.html">Sign Up</a></div>
+          <div><input onclick="doLogin(event)" type="submit" value="Submit" /></div>
+          <div><a href="../html/signup.html">Sign up!</a></div>
         </form>
       </div>
       <div class="item5"></div>
@@ -40,4 +40,7 @@
       <a href="https://github.com/kafargo">Alex Fargo</a>
     </footer>
   </body>
+  <script src="./src/service-helpers.js"></script>
+  <script src="./src/auth.service.js"></script>
+  <script src="./src/app.js"></script>
 </html>

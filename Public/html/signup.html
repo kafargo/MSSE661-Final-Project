@@ -15,15 +15,15 @@
       <div class="item4">
         <form class="" action="">
           <div>
-            <input id="email" type="text" placeholder="Email Address.." />
+            <input id="userEmail" type="text" placeholder="Email Address.." />
           </div>
           <div>
-            <input id="username" type="text" placeholder="Username.." />
+            <input id="userName" type="text" placeholder="Username.." />
           </div>
           <div>
-            <input id="password" type="password" placeholder="Password.." />
+            <input id="userPassword" type="password" placeholder="Password.." />
           </div>
-          <div><input type="submit" value="Create Account" /></div>
+          <div><input onclick="doRegister(event)" type="submit" value="Create Account" /></div>
         </form>
       </div>
       <div class="item5"></div>
@@ -31,4 +31,7 @@
     </div>
 
   </body>
+  <script src="../src/service-helpers.js"></script>
+  <script src="../src/auth.service.js"></script>
+  <script src="../src/app.js"></script>
 </html>
