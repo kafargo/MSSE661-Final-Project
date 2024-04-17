@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="../images/vegetable.png" />
     <link rel="stylesheet" href="../css/mainstyles.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
     <title>Grocery List Helper</title>
   </head>
   <body>
@@ -23,34 +24,35 @@
         </div>
       </div>
       <div class="item4">
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
-        <p>Grocry List goes here</p>
+        <div class="mainnavbar">
+          <a href="#" onclick="openModal(event)">Add Recipe</a>
+          <a href="#" onclick="makeGroceryList(event)">Show Grocry List</a>
+        </div>
+        <br></br>
+        <div id="grocery-list">Waiting on you...</div>
       </div>
     </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form novalidate>
+        <label for="recipe">
+          <span>Recipe:</span><br>
+          <input id="recipe" type="text" placeholder="Recipe Name" /><br>
+        </label>
+        <label for="ingrident" id="ingridentLabel">
+          <span>Ingrident(s):  (add more:   </span>
+          <input onclick="addIngrident(event)" id="addingrident" type="button" value="+"/>
+          <span>)</span><br>
+          <input class="ingrident" type="text" placeholder="Ingrident" /> <br>
+        </label>
+        <input id="Submit" type="button" value="Add" onclick="doAddRecipe(event)"/>
+    </div>
+  </div>
+
   </body>
   <script src="../src/api.config.js"></script>
   <script src="../src/simple-storage.js"></script>
@@ -59,5 +61,7 @@
   <script src="../src/recipe.service.js"></script>
   <script src="../src/route-guard.js"></script>
   <script src="../src/build-recipes-list.js"></script>
-  <script src="../src/app.js"></script>
+  <script src="../src/auth.js"></script>
+  <script src="../src/recipe.js"></script>
+  <script src="../src/modal.js"></script>
 </html>

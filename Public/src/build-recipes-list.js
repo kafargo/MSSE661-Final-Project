@@ -1,10 +1,8 @@
-
-(async () => {
+generateRecipeList = async () => {
   const recipes = await getRecipes();
   console.log(recipes);
 
   if (recipes.length) {
-    //this is where its looking to create the table
     const div = document.getElementById("recipes");
     const loadingDiv = div.childNodes[1];
 
@@ -39,6 +37,7 @@
       // Create recipe name cell
       const recipeCell = document.createElement("td");
       recipeCell.textContent = recipe.name;
+      recipeCell.className = "recipe-name";
       row.appendChild(recipeCell);
 
       // Create ingredients cell
@@ -53,4 +52,9 @@
 
     div.replaceChild(table, loadingDiv);
   }
+};
+
+// This is an IIFE (Immediately Invoked Function Expression).
+(async () => {
+  generateRecipeList();
 })();

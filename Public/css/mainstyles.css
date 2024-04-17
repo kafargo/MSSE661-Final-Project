@@ -87,6 +87,20 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #204b9d;
+  background-color: #2b6377;
   color: white;
+}
+
+/* styling for the grocery list */
+#grocery-list {
+  margin: auto;
+  width: 90%;
+  padding: 50px;
+  text-align: center;
+}
+
+ul.grocery-list {
+  list-style-type: circle;
+  list-style-position: inside;
+  text-align: left;
 }
