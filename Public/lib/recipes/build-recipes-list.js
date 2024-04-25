@@ -1,5 +1,6 @@
 generateRecipeList = async () => {
-  const recipes = await getRecipes();
+  const recipeService = new RecipeService();
+  const recipes = await recipeService.getRecipes();
   console.log(recipes);
 
   if (recipes.length) {
