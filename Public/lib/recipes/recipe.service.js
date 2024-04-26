@@ -10,6 +10,7 @@ class Recipe {
     try {
       const { name, ingredients } = newRecipe;
       await this.recipeService.addRecipe({ name, ingredients });
+      console.log("Recipe ", name, " added successfully");
     } catch (err) {
       console.log(err);
       alert("Unable to add recipe. Please try again later.");
@@ -72,21 +73,27 @@ class Recipe {
 
     //calling the function that makes the POST request
     const res = await recipeService.getGroceryList({ names });
-    console.log(res);
 
     //combines all the ingredients into one array
     const allIngredients = res.reduce((acc, recipe) => {
       return acc.concat(recipe.ingredients);
     }, []);
 
-    console.log("All ingredients:", allIngredients);
+    //fancy javascript way to remove duplicates
+    const uniqueIngredients = [...new Set(allIngredients)];
+
+    console.log(
+      "Make Grocery List function called and returned: ",
+      uniqueIngredients.length,
+      " ingredients"
+    );
 
     //creates the list of ingredients in the grocery list div
     const groceryListDiv = document.getElementById("grocery-list");
     const groceryList = document.createElement("ul");
     groceryList.className = "grocery-list";
 
-    allIngredients.forEach((ingredient) => {
+    uniqueIngredients.forEach((ingredient) => {
       const listItem = document.createElement("li");
       listItem.textContent = ingredient;
       groceryList.appendChild(listItem);

@@ -1,7 +1,11 @@
 generateRecipeList = async () => {
   const recipeService = new RecipeService();
   const recipes = await recipeService.getRecipes();
-  console.log(recipes);
+  console.log(
+    "Generate Recipe function called and returned: ",
+    recipes.length,
+    " recipes"
+  );
 
   if (recipes.length) {
     const div = document.getElementById("recipes");

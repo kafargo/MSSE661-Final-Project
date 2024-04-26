@@ -21,7 +21,7 @@ const _post = async (url, data) => {
     },
     body: JSON.stringify(data),
   });
-  console.log("response.status from service helper: ", res.status);
+  console.log("response.status from POST service helper: ", res.status);
   if (res.status === 200) {
     return res.json();
   } else {
@@ -37,7 +37,7 @@ const _postnotoken = async (url, data) => {
     },
     body: JSON.stringify(data),
   });
-  console.log("response.status from service helper: ", res.status);
+  console.log("response.status from POST service helper: ", res.status);
   if (res.status === 200) {
     return res.json();
   } else {
